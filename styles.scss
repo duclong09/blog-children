@@ -1,8 +1,6 @@
 $primary-color: #ffc87a;
 $text-color: #1a2b5f;
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 a {
   text-decoration: none;
 }
@@ -17,7 +15,7 @@ html {
 }
 
 body {
-  font-family: "Poppins" sans-serif;
+  font-family: "Poppins", sans-serif;
   color: $text-color;
   line-height: 1.4;
 }
@@ -104,6 +102,7 @@ img {
     font-size: 1.8rem;
     font-weight: 300;
     margin-bottom: 4rem;
+    color: #ccc;
   }
 
   &__buttons {
@@ -137,5 +136,14 @@ img {
     &.has-shadow {
       box-shadow: 0 10px 35px -5px $primary-color;
     }
+  }
+}
+
+.category {
+  &__list {
+    @include flex(stretch, space-between, wrap);
+  }
+  &__item {
+    width: calc(25% - 22.5px);
   }
 }
