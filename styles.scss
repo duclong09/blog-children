@@ -1,7 +1,7 @@
 $primary-color: #ffc87a;
 $text-color: #1a2b5f;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 a {
   text-decoration: none;
@@ -19,6 +19,7 @@ html {
 body {
   font-family: "Poppins" sans-serif;
   color: $text-color;
+  line-height: 1.4;
 }
 
 img {
@@ -72,7 +73,7 @@ img {
   }
   &__login {
     display: inline-block;
-    padding: 1.5rem 2.5rem;
+    padding: 1.5rem 3rem;
     border: 1px dashed currentColor;
     border-radius: 2.5rem;
   }
@@ -84,5 +85,57 @@ img {
   color: #1a2b5f;
   &__text {
     color: $primary-color;
+  }
+}
+
+.banner {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+  &__heading {
+    font-weight: 700;
+    font-size: 6rem;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
+  }
+  &__desc {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    .btn {
+      margin: 0 1rem;
+    }
+  }
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  font-size: 1.6rem;
+  text-align: center;
+  color: $text-color;
+  padding: 1.5rem 3rem;
+  display: inline-block;
+  border: 0;
+  background-color: transparent;
+  &--border {
+    border: 1px solid currentColor;
+  }
+  &--rounded {
+    border-radius: 5rem;
+  }
+  &--primary {
+    background-color: $primary-color;
+    &.has-shadow {
+      box-shadow: 0 10px 35px -5px $primary-color;
+    }
   }
 }
